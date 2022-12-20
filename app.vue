@@ -1,5 +1,10 @@
 <template>
   <div>
-    <h1>Welcome</h1>
+    <SeoKit />
+    <OgImageScreenshot />
+
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>

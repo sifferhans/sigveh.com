@@ -1,6 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindTypography from '@tailwindcss/typography'
+
 export default defineNuxtConfig({
-	extends: ['nuxt-seo-kit'],
+	modules: [
+		'@nuxt/content',
+		'@nuxtjs/tailwindcss'
+	],
+	extends: ['nuxt-seo-kit',],
 	runtimeConfig: {
 		public: {
 			siteUrl: 'https://sigveh.no/',
@@ -10,4 +15,13 @@ export default defineNuxtConfig({
 			titleSeparator: '·',
 		}
 	},
+	tailwindcss: {
+		viewer: false,
+		config: {
+			plugins: [tailwindTypography],
+			content: [
+				'content/**/**.md'
+			],
+		}
+	}
 })
