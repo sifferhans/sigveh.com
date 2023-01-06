@@ -2,6 +2,12 @@
 
 <template>
   <footer>
-    <p>Copyright {{ new Date().getFullYear() }}</p>
+    <p>{{ new Date().getFullYear() }} © Sigve Hansen</p>
   </footer>
 </template>
+
+<style scoped>
+p {
+  opacity: 0.6;
+}
+</style>
