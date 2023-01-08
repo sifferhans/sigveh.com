@@ -15,10 +15,10 @@ defineProps<{
 
 <template>
   <NuxtLink :to="post._path" class="blog-card">
-    <h3>
-      {{ post.title }}
-      <Badge v-if="post._draft">draft</Badge>
-    </h3>
+    <div class="header">
+      <h3>{{ post.title }}</h3>
+      <span class="draft" v-if="post._draft">(draft)</span>
+    </div>
     <p>{{ post.description }}</p>
     <div v-if="post.categories?.length" class="categories">
       <Badge v-for="category in post.categories" :key="category">
@@ -36,6 +36,16 @@ defineProps<{
 
 .blog-card:is(:hover, :focus-visible) h3 {
   text-decoration: underline;
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+  /* justify-content: space-between; */
+}
+
+.draft {
+  opacity: 0.5;
 }
 
 h3,

@@ -18,6 +18,17 @@ Todays CSS grid solution doesn't have the ability to dynamically place items in 
 
 CSS columns have been around for a good while now. And while the property has mostly been used for typography and textual content, it can just as well be used for laying out images or cards in a layout similar to masonry.
 
+```css
+.masonry {
+  columns: 3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+```
+
 Pay attention to the direction the items are laid out in. Using grid, the items are placed in the inline direction. With columns however, the items are placed in the block direction. It looks like a masonry layout, but it doesn't quite function like one. Remember, masonry layouts are still supposed to be laid out in the inline direction; from left to right.
 
 ## Conclusion
