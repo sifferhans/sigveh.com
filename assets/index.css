@@ -8,10 +8,19 @@ pre {
   border: 1px solid var(--border-color);
 }
 
+/* theme specifics */
 .dark-mode p {
   color: #d0d0d0;
 }
 
 .light-mode p {
   color: #404040;
+}
+
+.light-mode {
+  --border-color: #dddddd;
+}
+
+.dark-mode {
+  --border-color: #333333;
 }
