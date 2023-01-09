@@ -14,6 +14,7 @@
     "nuxt-seo-kit": "^0.4.8"
   },
   "dependencies": {
-    "@sigveh/css": "^1.1.0"
+    "@sigveh/css": "^1.1.0",
+    "nanoid": "^4.0.0"
   }
 }

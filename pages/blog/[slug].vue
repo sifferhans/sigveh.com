@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TextBalabncer from '@/components/text-balancer'
+</script>
 
 <template>
   <div>
@@ -19,7 +21,9 @@
       <span>Back</span>
     </NuxtLink>
     <ContentDoc v-slot="{ doc }">
-      <h1>{{ doc.title }}</h1>
+      <TextBalancer>
+        <h1 class="post-heading">{{ doc.title }}</h1>
+      </TextBalancer>
       <img v-if="doc.image" v-bind="doc.image" class="post-image" />
       <ContentRenderer :value="doc" />
     </ContentDoc>
@@ -56,5 +60,9 @@
 
 .post-image {
   margin-block: 2rem;
+}
+
+.post-heading {
+  margin-bottom: 0;
 }
 </style>
