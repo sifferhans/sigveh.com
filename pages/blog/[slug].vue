@@ -20,6 +20,7 @@
     </NuxtLink>
     <ContentDoc v-slot="{ doc }">
       <h1>{{ doc.title }}</h1>
+      <img v-if="doc.image" v-bind="doc.image" class="post-image" />
       <ContentRenderer :value="doc" />
     </ContentDoc>
   </div>
@@ -51,5 +52,9 @@
   height: 1em;
   display: inline;
   opacity: 0.5;
+}
+
+.post-image {
+  margin-block: 2rem;
 }
 </style>
