@@ -1,5 +1,17 @@
+body {
+  font-size: clamp(14px, 3vw, 18px);
+}
+
 pre {
   padding: 1rem;
   border-radius: calc(var(--border-radius) * 2);
   border: 1px solid var(--border-color);
+}
+
+.dark-mode p {
+  color: #d0d0d0;
+}
+
+.light-mode p {
+  color: #404040;
 }
