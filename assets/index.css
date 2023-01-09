@@ -1,5 +1,5 @@
 body {
-  font-size: clamp(14px, 3vw, 18px);
+  font-size: clamp(16px, 3vw, 18px);
 }
 
 pre {
