@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
 	css: ['@sigveh/css', 'assets/index.css'],
 	modules: ['@nuxt/content', '@nuxtjs/color-mode'],
-	extends: ['nuxt-seo-kit',],
+	extends: ['nuxt-seo-kit'],
 	runtimeConfig: {
 		public: {
 			siteUrl: 'https://sigveh.no/',
@@ -11,12 +11,12 @@ export default defineNuxtConfig({
 			titleSeparator: '·',
 		}
 	},
-	content: {
-		highlight: {
-			theme: {
-				default: 'github-light',
-				dark: 'poimandres',
-			}
-		}
-	}
+	// content: {
+	// 	highlight: {
+	// 		theme: {
+	// 			default: 'github-light',
+	// 			dark: 'poimandres',
+	// 		}
+	// 	}
+	// }
 })
