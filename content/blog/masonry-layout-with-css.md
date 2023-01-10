@@ -8,7 +8,6 @@ image:
   height: 652
 categories: [css]
 date: 2022-08-11
-draft: false
 ---
 
 One time I was exploring different kinds of layouts for HTML content, I found out about the masonry grid. I first saw it on Pinterest, and it looked so cool and fluid, like a game of Tetris for images. I started researching how it could be done, it couldn't be that difficult, right? CSS was powerful enough to make this work, right? Well, not quite.

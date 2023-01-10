@@ -4,8 +4,8 @@ type Post = {
   description?: string
   categories?: string[]
   date: string
+  draft: boolean
   _path: string
-  _draft: boolean
 }
 
 defineProps<{
@@ -17,7 +17,7 @@ defineProps<{
   <NuxtLink :to="post._path" class="blog-card">
     <div class="header">
       <h3>{{ post.title }}</h3>
-      <span class="draft" v-if="post._draft">(draft)</span>
+      <span class="draft" v-if="post.draft">(draft)</span>
     </div>
     <p>{{ post.description }}</p>
     <div v-if="post.categories?.length" class="categories">

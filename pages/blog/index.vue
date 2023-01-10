@@ -8,7 +8,11 @@ definePageMeta({
     'This is where I put my thoughts and my writings, whenever I get those.',
 })
 
-const query: QueryBuilderParams = { path: '/', sort: [{ date: -1 }] }
+const query: QueryBuilderParams = {
+  path: '/',
+  sort: [{ date: -1 }],
+  only: ['title', 'description', 'categories', '_path', 'draft'],
+}
 </script>
 
 <template>
