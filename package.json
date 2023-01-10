@@ -9,9 +9,11 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.3.0",
+    "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
     "@nuxtjs/color-mode": "^3.2.0",
     "nuxt": "3.0.0",
-    "nuxt-seo-kit": "^0.4.8"
+    "nuxt-seo-kit": "^0.4.8",
+    "remark-reading-time": "^2.0.1"
   },
   "dependencies": {
     "@sigveh/css": "^1.1.0",

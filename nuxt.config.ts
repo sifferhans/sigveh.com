@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
 	css: ['@sigveh/css', 'assets/index.css'],
-	modules: ['@nuxt/content', '@nuxtjs/color-mode'],
+	modules: ['@nuxt/content', '@nuxtjs/color-mode', '@nuxt/image-edge'],
 	extends: ['nuxt-seo-kit'],
 	runtimeConfig: {
 		public: {
@@ -11,12 +11,18 @@ export default defineNuxtConfig({
 			titleSeparator: '·',
 		}
 	},
-	// content: {
-	// 	highlight: {
-	// 		theme: {
-	// 			default: 'github-light',
-	// 			dark: 'poimandres',
-	// 		}
-	// 	}
-	// }
+	content: {
+		highlight: {
+			theme: {
+				default: 'min-light',
+				dark: 'poimandres',
+			}
+		},
+		markdown: {
+			remarkPlugins: ['remark-reading-time'],
+		}
+	},
+	colorMode: {
+		classSuffix: ''
+	}
 })
