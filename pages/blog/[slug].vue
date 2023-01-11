@@ -25,7 +25,7 @@ import TextBalabncer from '@/components/text-balancer'
         <h1 class="post-heading">{{ doc.title }}</h1>
       </TextBalancer>
       <p class="reading-time">{{ doc.readingTime.text }}</p>
-      <nuxt-img v-if="doc.image" v-bind="doc.image" class="post-image" />
+      <img v-if="doc.image" v-bind="doc.image" class="post-image" />
       <ContentRenderer :value="doc" />
     </ContentDoc>
   </div>

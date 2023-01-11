@@ -1,6 +1,10 @@
 export default defineNuxtConfig({
 	css: ['@sigveh/css', 'assets/index.css'],
-	modules: ['@nuxt/content', '@nuxtjs/color-mode', '@nuxt/image-edge'],
+	modules: [
+		'@nuxt/content',
+		'@nuxtjs/color-mode',
+		// '@nuxt/image-edge'
+	],
 	extends: ['nuxt-seo-kit'],
 	runtimeConfig: {
 		public: {
