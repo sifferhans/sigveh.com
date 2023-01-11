@@ -5,4 +5,6 @@ definePageMeta({
 })
 </script>
 
-<template></template>
+<template>
+  <p style="opacity: 0.5">Nothing here yet, sorry.</p>
+</template>
