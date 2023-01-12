@@ -7,6 +7,6 @@ definePageMeta({
 
 <template>
   <div>
-    <!-- <Introduction /> -->
+    <!-- <FeaturedPosts /> -->
   </div>
 </template>
