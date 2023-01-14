@@ -2,8 +2,7 @@ export default defineNuxtConfig({
 	css: ['@sigveh/css', 'assets/index.css'],
 	modules: [
 		'@nuxt/content',
-		'@nuxtjs/color-mode',
-		// '@nuxt/image-edge'
+		'@nuxtjs/color-mode'
 	],
 	extends: ['nuxt-seo-kit'],
 	runtimeConfig: {
@@ -28,5 +27,13 @@ export default defineNuxtConfig({
 	},
 	colorMode: {
 		classSuffix: ''
+	},
+	nitro: {
+		prerender: {
+			crawlLinks: true,
+			routes: [
+				'/',
+			]
+		}
 	}
 })
