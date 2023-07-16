@@ -10,15 +10,16 @@ export default defineNuxtConfig({
 			siteDescription: 'I enjoy designing and developing user interfaces.',
 			language: 'en-US',
 			titleSeparator: '·',
-		},
-		devtoToken: ''
+		}
 	},
 	app: {
 		head: {
 			bodyAttrs: {
 				class: 'font-sans'
 			}
-		}
+		},
+		pageTransition: false,
+		layoutTransition: false
 	},
 	content: {
 		highlight: {
@@ -38,5 +39,18 @@ export default defineNuxtConfig({
 				'/',
 			]
 		}
-	}
+	},
+	devTo: {
+		token: ''
+	},
+
+	experimental: {
+		typescriptBundlerResolution: true,
+		viewTransition: true,
+		componentIslands: true,
+		payloadExtraction: true,
+		typedPages: true,
+	},
+
+	sourcemap: false,
 })

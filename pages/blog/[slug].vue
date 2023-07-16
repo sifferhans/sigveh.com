@@ -13,10 +13,10 @@ import TextBalancer from '@/components/text-balancer'
     </NuxtLink>
     <ContentDoc v-slot="{ doc }">
       <TextBalancer>
-        <h1 class="m-0">{{ doc.title }}</h1>
+        <h1 class="m-0" style="view-transition-name: post-title">{{ doc.title }}</h1>
       </TextBalancer>
       <p class="text-gray-500">{{ doc.readingTime.text }}</p>
-      <img v-if="doc.image" v-bind="doc.image" class="my-8 rounded-lg" />
+      <img v-if="doc.image" v-bind="doc.image" class="my-8 rounded-lg" style="view-transition-name: post-image" />
       <ContentRenderer :value="doc" />
     </ContentDoc>
   </div>

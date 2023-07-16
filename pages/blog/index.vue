@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+import { QueryBuilderParams } from '#content'
 
 definePageMeta({
   title: 'Blog',
@@ -11,7 +11,7 @@ definePageMeta({
 const query: QueryBuilderParams = {
   path: '/',
   sort: [{ date: -1 }],
-  only: ['title', 'description', 'categories', '_path', 'draft'],
+  only: ['title', 'description', 'categories', '_path', 'draft', 'image'],
 }
 </script>
 
