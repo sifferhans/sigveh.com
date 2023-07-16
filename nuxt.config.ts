@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 			language: 'en-US',
 			titleSeparator: '·',
 		},
-		devToApiKey: 'duUMTF8UUKE6QNdekPV1GZaj'
+		devtoToken: ''
 	},
 	app: {
 		head: {
