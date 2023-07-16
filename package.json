@@ -8,15 +8,18 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.3.0",
-    "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
-    "@nuxtjs/color-mode": "^3.2.0",
-    "nuxt": "^3.0.0",
-    "nuxt-seo-kit": "^0.4.11",
+    "@nuxt/content": "^2.7.0",
+    "@nuxt/devtools": "^0.6.7",
+    "@nuxt/image-edge": "^1.0.0-rc.1-28143901.afe4120",
+    "@unocss/nuxt": "^0.53.5",
+    "@vueuse/nuxt": "^10.2.1",
+    "nuxt": "^3.6.3",
+    "nuxt-seo-kit": "^1.3.9",
     "remark-reading-time": "^2.0.1"
   },
   "dependencies": {
-    "@sigveh/css": "^1.1.0",
-    "nanoid": "^4.0.0"
-  }
+    "@unocss/reset": "^0.53.5",
+    "nanoid": "^4.0.2"
+  },
+  "packageManager": "pnpm@8.6.7"
 }

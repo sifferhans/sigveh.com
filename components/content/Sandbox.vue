@@ -1,14 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="sandbox">
+  <div class="w-full my-4">
     <slot />
   </div>
 </template>
-
-<style scoped>
-.sandbox {
-  width: 100%;
-  margin-block: 1rem;
-}
-</style>

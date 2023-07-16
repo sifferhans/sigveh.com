@@ -1,26 +1,16 @@
 <script lang="ts" setup>
-useSchemaOrg([
-  definePerson({
-    name: 'Sigve Hansen',
-    image: '/me.jpg',
-    sameAs: ['https://github.com/sifferhans'],
-  }),
-  defineWebSite({
-    name: 'Sigve Hansen',
-  }),
-  defineWebPage(),
-])
-
 useHead({
+  titleTemplate: title => title ? `${title} | Sigve Hansen` : 'Sigve Hansen',
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
 })
 
-defineOgImageScreenshot()
+useSeoMeta({
+  ogImage: '/me.jpg'
+})
 </script>
 
 <template>
   <SeoKit />
-  <OgImageScreenshot />
 
   <NuxtLayout>
     <NuxtPage />

@@ -6,5 +6,5 @@ definePageMeta({
 </script>
 
 <template>
-  <p style="opacity: 0.5">Nothing here yet, sorry.</p>
+  <p class="text-gray-500">Nothing here yet, sorry.</p>
 </template>

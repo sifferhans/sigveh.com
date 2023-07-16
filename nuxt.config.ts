@@ -1,9 +1,7 @@
 export default defineNuxtConfig({
-	css: ['@sigveh/css', 'assets/index.css'],
-	modules: [
-		'@nuxt/content',
-		'@nuxtjs/color-mode'
-	],
+	devtools: { enabled: true },
+	css: ['@unocss/reset/tailwind.css'],
+	modules: ['@nuxt/content', '@unocss/nuxt', '@vueuse/nuxt'],
 	extends: ['nuxt-seo-kit'],
 	runtimeConfig: {
 		public: {
@@ -12,6 +10,14 @@ export default defineNuxtConfig({
 			siteDescription: 'I enjoy designing and developing user interfaces.',
 			language: 'en-US',
 			titleSeparator: '·',
+		},
+		devToApiKey: 'duUMTF8UUKE6QNdekPV1GZaj'
+	},
+	app: {
+		head: {
+			bodyAttrs: {
+				class: 'font-sans'
+			}
 		}
 	},
 	content: {
@@ -24,9 +30,6 @@ export default defineNuxtConfig({
 		markdown: {
 			remarkPlugins: ['remark-reading-time'],
 		}
-	},
-	colorMode: {
-		classSuffix: ''
 	},
 	nitro: {
 		prerender: {

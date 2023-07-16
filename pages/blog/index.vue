@@ -17,15 +17,8 @@ const query: QueryBuilderParams = {
 
 <template>
   <ContentList :query="query" v-slot="{ list }">
-    <div class="blog-posts">
+    <div class="grid gap-2">
       <BlogCard v-for="post in list" :key="post._path" :post="post" />
     </div>
   </ContentList>
 </template>
-
-<style scoped>
-.blog-posts {
-  display: grid;
-  gap: 0.5rem;
-}
-</style>

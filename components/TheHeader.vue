@@ -1,43 +1,21 @@
 <script setup lang="ts">
-const routes = ref([
+const routes = [
   { name: 'Blog', path: '/blog' },
   { name: 'Projects', path: '/projects' },
-])
+]
 </script>
 
 <template>
-  <header>
-    <strong>
-      <NuxtLink to="/">sigveh.no</NuxtLink>
-    </strong>
+  <header class="py-4 flex justify-between items-center">
+    <NuxtLink to="/">
+      <strong>sigveh</strong>
+    </NuxtLink>
     <nav>
-      <ul>
-        <li v-for="route in routes" :key="route.path">
+      <ul class="flex gap-8 items-center">
+        <li class="list-none" v-for="route in routes" :key="route.path">
           <NuxtLink :to="route.path">{{ route.name }}</NuxtLink>
         </li>
       </ul>
     </nav>
   </header>
 </template>
-
-<style scoped>
-header {
-  padding-block: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-ul {
-  display: flex;
-  gap: 2rem;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-</style>
