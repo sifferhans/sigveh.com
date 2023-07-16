@@ -1,13 +1,13 @@
-# sigveh.no
+# sigveh.com
 
 My personal website, built with Nuxt.  
-[https://sigveh.no](https://sigveh.no)
+[https://sigveh.com](https://sigveh.com)
 
 ## Stack
 
 - [Nuxt](https://nuxt.com)
 - [@nuxt/content](https://content.nuxtjs.org)
-- [@sigveh/css](https://github.com/sifferhans/css)
+- [UnoCSS](https://unocss.dev)
 
 ## Develop
 
