@@ -1,11 +1,16 @@
 export default defineNuxtConfig({
-	devtools: { enabled: true },
+	devtools: {
+		enabled: true,
+		timeline: {
+			enabled: true
+		}
+	},
 	css: ['@unocss/reset/tailwind.css'],
-	modules: ['@nuxt/content', '@unocss/nuxt', '@vueuse/nuxt'],
+	modules: ['@nuxt/content', '@unocss/nuxt', '@vueuse/nuxt', '@nuxt/image', 'nuxt-capo'],
 	extends: ['nuxt-seo-kit'],
 	runtimeConfig: {
 		public: {
-			siteUrl: 'https://sigveh.no',
+			siteUrl: 'https://sigveh.com',
 			siteName: 'Sigve Hansen',
 			siteDescription: 'I enjoy designing and developing user interfaces.',
 			language: 'en-US',

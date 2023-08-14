@@ -16,9 +16,9 @@ const query: QueryBuilderParams = {
 </script>
 
 <template>
-  <ContentList :query="query" v-slot="{ list }">
-    <div class="grid gap-2">
+  <div class="grid gap-2">
+    <ContentList :query="query" v-slot="{ list }">
       <BlogCard v-for="post in list" :key="post._path" :post="post" />
-    </div>
-  </ContentList>
+    </ContentList>
+  </div>
 </template>

@@ -60,7 +60,7 @@ export default defineNuxtModule({
 				continue
 			}
 
-			await await $devto('articles', {
+			await $devto('articles', {
 				method: 'POST',
 				body: {
 					article: {
@@ -98,7 +98,7 @@ async function getMarkdownArticles() {
 			body_markdown: contents,
 			title,
 			slug,
-			canonical_url: `https://roe.dev/blog/${slug}/`,
+			canonical_url: `https://sigveh.com/blog/${slug}/`,
 		})
 	}
 	return articles
