@@ -12,6 +12,7 @@ export default defineConfig({
     presetWind(),
     presetTypography(),
     presetWebFonts({
+      provider: "bunny",
       fonts: {
         sans: "DM Sans",
         serif: "Cormorant Garamond",

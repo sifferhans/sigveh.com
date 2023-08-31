@@ -21,7 +21,7 @@ const props = defineProps<{
   >
     <div class="sm:col-span-2">
       <div class="flex gap-4">
-        <h3 class="my-0" style="view-transition-name: heading">
+        <h3 class="font-bold text-xl" style="view-transition-name: heading">
           {{ post.title }}
         </h3>
         <span class="text-gray-500" v-if="post.draft">(draft)</span>

@@ -2,7 +2,7 @@
 import { QueryBuilderParams } from "#content";
 
 definePageMeta({
-  title: "Blog",
+  title: "Posts",
   pageTitle: "My humble writings",
   description:
     "This is where I put my thoughts and my writings, whenever I get those.",

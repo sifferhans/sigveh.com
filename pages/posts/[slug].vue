@@ -2,13 +2,22 @@
 import TextBalancer from "@/components/text-balancer";
 
 const route = useRoute("posts-slug");
+
+const page = await queryContent("posts")
+  .where({ _path: { $contains: route.params.slug } })
+  .only(["title"])
+  .findOne();
+
+useHead({
+  title: page?.title,
+});
 </script>
 
 <template>
-  <div>
+  <div class="prose">
     <NuxtLink
       class="flex gap-2 items-center decoration-none my-8 hover:underline focus-visible:underline"
-      to="/blog"
+      to="/posts"
     >
       <svg
         class="h-4 inline text-gray-500"
