@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { QueryBuilderParams } from '#content'
+import { QueryBuilderParams } from "#content";
 
 definePageMeta({
-  title: 'Blog',
-  pageTitle: 'My humble writings',
+  title: "Blog",
+  pageTitle: "My humble writings",
   description:
-    'This is where I put my thoughts and my writings, whenever I get those.',
-})
+    "This is where I put my thoughts and my writings, whenever I get those.",
+});
 
 const query: QueryBuilderParams = {
-  path: '/',
+  path: "/",
   sort: [{ date: -1 }],
-  only: ['title', 'description', 'categories', '_path', 'draft', 'image'],
-}
+  only: ["title", "description", "categories", "_path", "draft", "image"],
+};
 </script>
 
 <template>

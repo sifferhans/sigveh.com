@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 definePageMeta({
-  description: 'I enjoy designing and developing user interfaces.',
-})
+  description: "I enjoy designing and developing user interfaces.",
+});
 </script>
 
 <template>
-  <Introduction />
+  <div>
+    <AnimatedTitle title="Sigve_Hansen" />
+  </div>
 </template>
