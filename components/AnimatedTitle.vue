@@ -1,24 +1,35 @@
 <script lang="ts" setup>
-defineProps<{
+const props = defineProps<{
   /**
    * Underscore is converted to a line break
    */
   title: `${string}_${string}`;
 }>();
+
+const emit = defineEmits(["done"]);
+
+const delay = 75;
+const time = computed(() => delay * props.title.length);
+
+onMounted(() => {
+  setTimeout(() => {
+    emit("done");
+  }, time.value);
+});
 </script>
 
 <template>
-  <h1 class="lg:text-9xl text-6xl font-serif leading-none">
+  <h1 class="md:text-9xl text-7xl font-serif leading-none">
     <template v-for="(char, index) in title" :key="char">
       <br v-if="char === '_'" />
-      <span v-else :data-index="index" :style="`--delay: ${index * 75}ms`">
+      <span v-else :data-index="index" :style="`--delay: ${index * delay}ms`">
         {{ char }}
       </span>
     </template>
   </h1>
 </template>
 
-<style>
+<style scoped>
 [data-index] {
   animation-name: fade-in;
   animation-duration: 2s;
