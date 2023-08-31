@@ -17,7 +17,7 @@ useHead({
   <div class="prose">
     <NuxtLink
       class="flex gap-2 items-center decoration-none my-8 hover:underline focus-visible:underline"
-      to="/posts"
+      to="/"
     >
       <svg
         class="h-4 inline text-gray-500"
