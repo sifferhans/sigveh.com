@@ -34,6 +34,14 @@ export default defineNuxtConfig({
       routes: ["/"],
     },
   },
+  app: {
+    pageTransition: {
+      enterActiveClass: "transition-all duration-400 ease",
+      enterFromClass: "opacity-0",
+      leaveActiveClass: "transition-all duration-400 ease",
+      leaveToClass: "opacity-0",
+    },
+  },
 
   experimental: {
     typescriptBundlerResolution: true,
