@@ -37,7 +37,10 @@ useHead({
     </NuxtLink>
     <ContentDoc v-slot="{ doc }">
       <TextBalancer>
-        <h1 class="m-0" style="view-transition-name: heading">
+        <h1
+          class="m-0 font-serif text-5xl md:text-6xl"
+          style="view-transition-name: heading"
+        >
           {{ doc.title }}
         </h1>
       </TextBalancer>

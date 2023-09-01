@@ -4,7 +4,7 @@ const posts = await queryContent("posts").find();
 
 <template>
   <div class="my-6 md:my-8">
-    <h2 class="my-1">Recent posts</h2>
+    <h2 class="my-1" style="view-transition-name: heading">Recent posts</h2>
     <ul>
       <li
         v-for="(post, index) in posts"
