@@ -6,7 +6,13 @@ export default defineNuxtConfig({
     },
   },
   css: ["@unocss/reset/tailwind.css"],
-  modules: ["@nuxt/content", "@unocss/nuxt", "@vueuse/nuxt", "@nuxt/image"],
+  modules: [
+    "@nuxt/content",
+    "@nuxthq/studio",
+    "@unocss/nuxt",
+    "@vueuse/nuxt",
+    "@nuxt/image",
+  ],
   extends: ["nuxt-seo-kit"],
   runtimeConfig: {
     public: {
