@@ -1,16 +1,19 @@
 <script lang="ts" setup>
-const posts = await queryContent("posts").find();
+const posts = await queryContent("posts").limit(10).find();
 </script>
 
 <template>
   <div class="my-6 md:my-8">
-    <h2 class="my-1" style="view-transition-name: heading">Recent posts</h2>
+    <h2 class="my-1 font-300" style="view-transition-name: heading">
+      Recent posts
+    </h2>
     <ul>
       <li
         v-for="(post, index) in posts"
         :key="post._id"
         :data-index="index"
         :style="`--delay: ${index * 50}ms`"
+        class="!block font-300"
       >
         <NuxtLink
           :to="post._path"

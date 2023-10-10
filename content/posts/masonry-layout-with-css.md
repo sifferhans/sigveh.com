@@ -1,11 +1,6 @@
 ---
 title: Masonry Layout with CSS
 description: Masonry layout is one of the most requested CSS features, but did you know we can already do it? Kinda.
-image:
-  src: /images/masonry.png
-  alt: An illustration of a masonry layout
-  width: 1212
-  height: 652
 categories: [css]
 date: 2022-08-11
 ---
