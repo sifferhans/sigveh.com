@@ -20,6 +20,9 @@ export default defineNuxtConfig({
     description: "I enjoy designing and developing user interfaces.",
     currentLocale: "en-US",
   },
+  sitemap: {
+    strictNuxtContentPaths: true,
+  },
   content: {
     highlight: {
       theme: {
