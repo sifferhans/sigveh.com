@@ -12,10 +12,10 @@
     "@nuxt/devtools": "^0.8.5",
     "@nuxt/image": "rc",
     "@nuxthq/studio": "^1.0.0",
+    "@nuxtseo/module": "2.0.0-beta.15",
     "@unocss/nuxt": "^0.56.5",
     "@vueuse/nuxt": "^10.4.1",
     "nuxt": "^3.7.4",
-    "nuxt-seo-kit": "^1.3.13",
     "remark-reading-time": "^2.0.1"
   },
   "dependencies": {

@@ -7,21 +7,18 @@ export default defineNuxtConfig({
   },
   css: ["@unocss/reset/tailwind.css"],
   modules: [
+    "@nuxtseo/module",
     "@nuxt/content",
     "@nuxthq/studio",
     "@unocss/nuxt",
     "@vueuse/nuxt",
     "@nuxt/image",
   ],
-  extends: ["nuxt-seo-kit"],
-  runtimeConfig: {
-    public: {
-      siteUrl: "https://sigveh.com",
-      siteName: "Sigve Hansen",
-      siteDescription: "I enjoy designing and developing user interfaces.",
-      language: "en-US",
-      titleSeparator: "·",
-    },
+  site: {
+    url: "https://sigveh.com",
+    name: "Sigve Hansen",
+    description: "I enjoy designing and developing user interfaces.",
+    currentLocale: "en-US",
   },
   content: {
     highlight: {
@@ -32,12 +29,6 @@ export default defineNuxtConfig({
     },
     markdown: {
       remarkPlugins: ["remark-reading-time"],
-    },
-  },
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ["/"],
     },
   },
   app: {
