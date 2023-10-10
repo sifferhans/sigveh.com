@@ -14,7 +14,7 @@
     "@nuxthq/studio": "^1.0.0",
     "@nuxtseo/module": "2.0.0-beta.15",
     "@unocss/nuxt": "^0.56.5",
-    "@vueuse/nuxt": "^10.4.1",
+    "@vueuse/nuxt": "^10.5.0",
     "nuxt": "^3.7.4",
     "remark-reading-time": "^2.0.1"
   },
@@ -22,5 +22,5 @@
     "@unocss/reset": "^0.56.5",
     "nanoid": "^5.0.1"
   },
-  "packageManager": "pnpm@8.8.0"
+  "packageManager": "pnpm@8.9.0"
 }
