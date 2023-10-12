@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   for (const post of posts) {
     feed.item({
       title: post.title!,
-      url: `https://sigveh.com/posts/${post._path}`,
+      url: `https://sigveh.com/${post._path}`,
       description: post.description,
       date: post.date,
     });
