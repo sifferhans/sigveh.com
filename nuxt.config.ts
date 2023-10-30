@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "@unocss/nuxt",
     "@vueuse/nuxt",
     "@nuxt/image",
+    "@pinia/nuxt",
   ],
   site: {
     url: "https://sigveh.com",
