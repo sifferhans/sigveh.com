@@ -1,10 +1,14 @@
 <script lang="ts" setup>
-const titleAnimated = ref(false);
+const titleStore = useTitleStore();
 </script>
 
 <template>
   <div>
-    <AnimatedTitle title="Sigve_Hansen" @done="titleAnimated = true" />
-    <PostsList v-if="titleAnimated" />
+    <AnimatedTitle
+      title="Sigve_Hansen"
+      :should-animate="!titleStore.hasAnimated"
+      @done="titleStore.setAnimated(true)"
+    />
+    <PostsList v-if="titleStore.hasAnimated" />
   </div>
 </template>

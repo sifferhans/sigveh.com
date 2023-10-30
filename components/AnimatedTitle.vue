@@ -1,17 +1,25 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  /**
-   * Underscore is converted to a line break
-   */
-  title: `${string}_${string}`;
-}>();
+const props = withDefaults(
+  defineProps<{
+    /**
+     * Underscore is converted to a line break
+     */
+    title: `${string}_${string}`;
+    delay?: number;
+    shouldAnimate?: boolean;
+  }>(),
+  {
+    delay: 75,
+  }
+);
 
 const emit = defineEmits(["done"]);
 
-const delay = 75;
-const time = computed(() => delay * props.title.length);
+const time = computed(() => props.delay * props.title.length);
 
 onMounted(() => {
+  if (!props.shouldAnimate) return;
+
   setTimeout(() => {
     emit("done");
   }, time.value);
@@ -19,7 +27,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1 class="md:text-9xl text-7xl font-serif leading-none">
+  <h1
+    :data-animated="shouldAnimate"
+    class="md:text-9xl text-7xl font-serif leading-none"
+  >
     <template v-for="(char, index) in title" :key="char">
       <br v-if="char === '_'" />
       <span v-else :data-index="index" :style="`--delay: ${index * delay}ms`">
@@ -31,6 +42,10 @@ onMounted(() => {
 
 <style scoped>
 [data-index] {
+  display: inline-block;
+}
+
+[data-animated="true"] [data-index] {
   animation-name: fade-in;
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -38,8 +53,6 @@ onMounted(() => {
   animation-fill-mode: forwards;
   opacity: 0;
   translate: 0 0.5em;
-
-  display: inline-block;
 }
 
 @keyframes fade-in {
